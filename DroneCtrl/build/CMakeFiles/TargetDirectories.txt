@@ -1,0 +1,8 @@
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/install.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/list_install_components.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/edit_cache.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/rebuild_cache.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/drone.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/basictest.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/install/local.dir
+/home/clemens/Downloads/libdrone-master/build/CMakeFiles/install/strip.dir
