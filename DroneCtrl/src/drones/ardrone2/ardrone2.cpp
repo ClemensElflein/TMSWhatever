@@ -248,7 +248,7 @@ drone::connectionstatus ARDrone2::tryConnecting()
 		// Wait for the AR.Drone to process the commands
 		boost::this_thread::sleep_for(boost::chrono::milliseconds(50));
 
-		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand(ardrone2::config::VIDEO_CODEC, to_string(_default_codec)), ConfigIDSCommand(), ConfigCommand(ardrone2::config::MAX_BITRATE, to_string(4000))});
+		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand(ardrone2::config::VIDEO_CODEC, to_string(_default_codec)), ConfigIDSCommand(), ConfigCommand(ardrone2::config::MAX_BITRATE, to_string(3000))});
 
 		// Init navdata manager
 		_nm.init(_ip, *_io_service);
