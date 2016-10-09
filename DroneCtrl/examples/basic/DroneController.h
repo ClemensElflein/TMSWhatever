@@ -28,8 +28,8 @@
 
 #define NICK_FACTOR .4
 #define ROLL_FACTOR .4
-#define VSPEED_FACTOR .5
-#define YAW_FACTOR 1.0
+#define VSPEED_FACTOR 2
+#define YAW_FACTOR 4.0
 
 //#define VERBOSE
 

@@ -60,7 +60,7 @@ void ControlLink::sendATCommands(vector<ATCommand> cmds)
 			}
 
 			buf << '\r';
-
+/*
 			//if(cmds[i].getCommand().compare("PCMD") != 0) {
 				cout << "AT*" << cmds[i].getCommand() << "=" << to_string(seqNum);
 				for(unsigned int j = 0; j < cmds[i].getParameters().size(); j++)
@@ -69,7 +69,7 @@ void ControlLink::sendATCommands(vector<ATCommand> cmds)
 					cout << cmds[i].getParameters()[j];
 				}
 				cout << endl;
-
+*/
 
 
 			seqNum++;

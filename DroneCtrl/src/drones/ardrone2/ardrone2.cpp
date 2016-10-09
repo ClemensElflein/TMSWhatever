@@ -84,10 +84,10 @@ void ARDrone2::setLimits(drone::limits limits)
 		ConfigIDSCommand(), ConfigCommand("control:control_yaw", max_yawspeed)
 	};
 
-	/*_cmdmutex.lock();
+	_cmdmutex.lock();
 	_commandqueue.insert(_commandqueue.end(), configCommands.begin(), configCommands.end());
 	_cmdmutex.unlock();
-*/
+
  }
 
 void ARDrone2::setConfig(drone::config config)

@@ -45,10 +45,10 @@ bool DroneController::setup() {
     //dronePtr->addCommand(ardrone2::commands::configuration(ardrone2::config::VERTICAL_SPEED_MAX, to_string(2)));
     //dronePtr->addCommand(ardrone2::commands::configuration(ardrone2::config::TILT_MAX, to_string(1)));
     //dronePtr->addCommand(ardrone2::commands::configuration(ardrone2::config::YAW_SPEED_MAX, to_string(1)));
-    /*{
+    {
         drone::limits limits;
-        limits.altitude = 3000;
-        limits.vspeed = 200;
+        limits.altitude = 4000;
+        limits.vspeed = (int)(VSPEED_FACTOR*1000);
         limits.angle = NICK_FACTOR;
         limits.yawspeed = YAW_FACTOR;
         dronePtr->setLimits(limits);
@@ -58,7 +58,7 @@ bool DroneController::setup() {
     cout << "Limit Vspeed: " << limits.vspeed << endl;
     cout << "Limit Angle: " << limits.angle << endl;
     cout << "Limit Yawspeed: " << limits.yawspeed << endl;
-*/
+
 
 
     dronePtr->startUpdateLoop();
