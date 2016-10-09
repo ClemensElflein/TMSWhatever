@@ -62,9 +62,9 @@ void ARDrone2::setLimits(drone::limits limits)
 	_currentLimits = limits;
 
 	string config_tilt = to_string((float) M_PI/2.0f);
-	string max_altitude = to_string(limits.altitude);
+	string max_altitude = to_string((int)limits.altitude);
 	string max_angle = to_string(limits.angle);
-	string max_vspeed = to_string(limits.vspeed);
+	string max_vspeed = to_string((int)limits.vspeed);
 	string max_yawspeed = to_string(limits.yawspeed);
 
 	// Decimal separator needs to be a dot (to_string seems to recognize the current locale)
@@ -79,13 +79,16 @@ void ARDrone2::setLimits(drone::limits limits)
 		ConfigIDSCommand(), ConfigCommand("control:altitude_max", max_altitude),
 		ConfigIDSCommand(), ConfigCommand("control:euler_angle_max", max_angle),
 		ConfigIDSCommand(), ConfigCommand("control:control_vz_max", max_vspeed),
+		ConfigIDSCommand(), ConfigCommand("control:indoor_control_vz_max", max_vspeed),
+		ConfigIDSCommand(), ConfigCommand("control:outdoor_control_vz_max", max_vspeed),
 		ConfigIDSCommand(), ConfigCommand("control:control_yaw", max_yawspeed)
 	};
 
-	_cmdmutex.lock();
+	/*_cmdmutex.lock();
 	_commandqueue.insert(_commandqueue.end(), configCommands.begin(), configCommands.end());
 	_cmdmutex.unlock();
-}
+*/
+ }
 
 void ARDrone2::setConfig(drone::config config)
 {
@@ -237,18 +240,18 @@ drone::connectionstatus ARDrone2::tryConnecting()
 
 
 		// Needed for the AR.Drone to send full navigation data and accept commands (Somewhat like described in the dev guide in section 7.1.2, and some magic)
-		_cl.setAppID();
-		boost::this_thread::sleep_for(boost::chrono::milliseconds(250)); // Wait until the drone has performed its configuration switch (important)
+		//_cl.setAppID();
+		/*boost::this_thread::sleep_for(boost::chrono::milliseconds(250)); // Wait until the drone has performed its configuration switch (important)
 		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand("general:navdata_demo", "TRUE"), ControlCommand(0)});
 		boost::this_thread::sleep_for(boost::chrono::milliseconds(250));
 		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand("general:navdata_demo", "FALSE"), ConfigIDSCommand(), ConfigCommand("general:navdata_options", "268435455"), ControlCommand(5)});
 		boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
 		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand("control:control_level", ATCommand::_int(1<<0))});
-
+*/
 		// Wait for the AR.Drone to process the commands
 		boost::this_thread::sleep_for(boost::chrono::milliseconds(50));
 
-		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand(ardrone2::config::VIDEO_CODEC, to_string(_default_codec)), ConfigIDSCommand(), ConfigCommand(ardrone2::config::MAX_BITRATE, to_string(3000))});
+		_cl.sendATCommands(vector<ATCommand>{ConfigIDSCommand(), ConfigCommand(ardrone2::config::VIDEO_CODEC, to_string(_default_codec)), ConfigIDSCommand(), ConfigCommand(ardrone2::config::MAX_BITRATE, to_string(4000))});
 
 		// Init navdata manager
 		_nm.init(_ip, *_io_service);
@@ -377,15 +380,20 @@ bool ARDrone2::processCommand(drone::command &command)
             float theta = applyLimit(attitude(0), limits.angle); // pitch
             float phi = applyLimit(attitude(1), limits.angle); // roll
             float yaw = applyLimit(attitude(2), limits.yawspeed); // yawspeed
-            float gaz = applyLimit(vspeed, limits.vspeed); // vspeed
+            float gaz = vspeed;//applyLimit(vspeed, limits.vspeed); // vspeed
 
             // Convert from angle to value between -1.0 and 1.0
             theta = theta * (1/limits.angle);
             phi = phi * (1/limits.angle);
             yaw = yaw * (1/limits.yawspeed);
-            gaz = gaz * (1/limits.vspeed);
+            //gaz = gaz * (1/limits.vspeed);
 
-            _latestAttitudeCommand = AttitudeCommand(phi, theta, gaz, yaw);
+            cout << "gaz " << gaz << endl;
+
+            if(abs(gaz) < 0.01)
+                gaz = 0;
+
+			_latestAttitudeCommand = AttitudeCommand(phi, theta, gaz, yaw);
 
             _cmdmutex.lock();
             _commandqueue.push_back(_latestAttitudeCommand);

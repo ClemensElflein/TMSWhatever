@@ -15,7 +15,7 @@
 #include <thread>
 #include "joystick.hh"
 
-#define IS_OUTDOOR false
+#define IS_OUTDOOR true
 
 #define BTN_ARM 4
 #define BTN_FLY 5
@@ -25,6 +25,13 @@
 #define AXIS_NICK 3
 #define AXIS_YAW 0
 #define AXIS_VSPEED 1
+
+#define NICK_FACTOR .4
+#define ROLL_FACTOR .4
+#define VSPEED_FACTOR .5
+#define YAW_FACTOR 1.0
+
+//#define VERBOSE
 
 #define DEBUG
 //#define DEMO
@@ -38,6 +45,8 @@ private:
     bool armed;
     bool fly;
     double vspeed, nick, roll, yaw;
+    long lastCalled = 0;
+    bool updatedValues;
 
     bool handleEvent(JoystickEvent &event);
 public:

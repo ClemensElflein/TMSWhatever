@@ -46,6 +46,8 @@ void ControlLink::sendATCommands(vector<ATCommand> cmds)
 
 		for(unsigned int i = 0; i < cmds.size(); i++)
 		{
+			if(cmds[i].getCommand().compare("CONFIG_IDS") == 0)
+				continue;
 			buf << "AT*";
 			buf << cmds[i].getCommand();
 			buf << '=';
@@ -59,8 +61,20 @@ void ControlLink::sendATCommands(vector<ATCommand> cmds)
 
 			buf << '\r';
 
+			//if(cmds[i].getCommand().compare("PCMD") != 0) {
+				cout << "AT*" << cmds[i].getCommand() << "=" << to_string(seqNum);
+				for(unsigned int j = 0; j < cmds[i].getParameters().size(); j++)
+				{
+					cout << ',';
+					cout << cmds[i].getParameters()[j];
+				}
+				cout << endl;
+
+
+
 			seqNum++;
 		}
+
 
 		socket->send(boost::asio::buffer(buf.str()));
 	}

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/clemens/Downloads/libdrone-master
+CMAKE_SOURCE_DIR = /home/clemens/TMSWhatever/DroneCtrl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/clemens/Downloads/libdrone-master/build
+CMAKE_BINARY_DIR = /home/clemens/TMSWhatever/DroneCtrl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clemens/Downloads/libdrone-master/build/CMakeFiles /home/clemens/Downloads/libdrone-master/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles /home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clemens/Downloads/libdrone-master/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -179,6 +179,33 @@ basictest: cmake_check_build_system
 basictest/fast:
 	$(MAKE) -f CMakeFiles/basictest.dir/build.make CMakeFiles/basictest.dir/build
 .PHONY : basictest/fast
+
+examples/basic/DroneController.o: examples/basic/DroneController.cpp.o
+
+.PHONY : examples/basic/DroneController.o
+
+# target to build an object file
+examples/basic/DroneController.cpp.o:
+	$(MAKE) -f CMakeFiles/basictest.dir/build.make CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o
+.PHONY : examples/basic/DroneController.cpp.o
+
+examples/basic/DroneController.i: examples/basic/DroneController.cpp.i
+
+.PHONY : examples/basic/DroneController.i
+
+# target to preprocess a source file
+examples/basic/DroneController.cpp.i:
+	$(MAKE) -f CMakeFiles/basictest.dir/build.make CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.i
+.PHONY : examples/basic/DroneController.cpp.i
+
+examples/basic/DroneController.s: examples/basic/DroneController.cpp.s
+
+.PHONY : examples/basic/DroneController.s
+
+# target to generate assembly for a file
+examples/basic/DroneController.cpp.s:
+	$(MAKE) -f CMakeFiles/basictest.dir/build.make CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.s
+.PHONY : examples/basic/DroneController.cpp.s
 
 examples/basic/basictest.o: examples/basic/basictest.cpp.o
 
@@ -626,6 +653,9 @@ help:
 	@echo "... basictest"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... examples/basic/DroneController.o"
+	@echo "... examples/basic/DroneController.i"
+	@echo "... examples/basic/DroneController.s"
 	@echo "... examples/basic/basictest.o"
 	@echo "... examples/basic/basictest.i"
 	@echo "... examples/basic/basictest.s"

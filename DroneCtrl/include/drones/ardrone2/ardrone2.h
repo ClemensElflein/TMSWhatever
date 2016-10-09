@@ -63,7 +63,7 @@ class ARDrone2 : public FPVDrone, public std::enable_shared_from_this<ARDrone2>
 		NavdataManager _nm;
 		VideoManager _vm;
 
-		int _default_codec = ardrone2::config::codec::H264_360P_SLRS;
+		int _default_codec = ardrone2::config::codec::H264_360P;
 
 		std::mutex _cmdmutex;
 
@@ -71,7 +71,7 @@ class ARDrone2 : public FPVDrone, public std::enable_shared_from_this<ARDrone2>
 
 		AttitudeCommand _latestAttitudeCommand;
 
-		drone::limits _defaultLimits{0.2f, 2.0f, 1.2f, 5.0f};
+		drone::limits _defaultLimits{0.2f,1.0f, 2000.0f, 3000.0f};
 		drone::limits _currentLimits{std::numeric_limits<float>::quiet_NaN(), std::numeric_limits<float>::quiet_NaN(), std::numeric_limits<float>::quiet_NaN(), std::numeric_limits<float>::quiet_NaN()};
 
 		bool _outdoor = false;

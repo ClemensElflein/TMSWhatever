@@ -23,7 +23,7 @@ class ATCommand
 	private:
 		std::string _cmd;
 		std::vector<std::string> _params;
-		static unsigned int floatToIntBits(float f);
+		static int floatToIntBits(float f);
 };
 
 #endif

@@ -9,7 +9,7 @@ CMakeFiles/drone.dir/src/drone.cpp.o
  ../include/interface/inavdatalistener.h
  ../include/interface/istatuslistener.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drone.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drone.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -237,7 +237,7 @@ CMakeFiles/drone.dir/src/dronehelper.cpp.o
  ../src/drones/bebop/fullnavdata.h
  ../src/drones/bebop/protocol.h
  ../src/drones/bebop/videodecoder.h
- /home/clemens/Downloads/libdrone-master/src/dronehelper.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/dronehelper.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -508,22 +508,22 @@ CMakeFiles/drone.dir/src/drones/ardrone2/ardrone2.cpp.o
  ../src/drones/ardrone2/video/pave.h
  ../src/drones/ardrone2/video/videoframe.h
  ../src/drones/ardrone2/video/videomanager.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/ardrone2.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/attitudecommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configidscommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/controlcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/emergencycommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flattrimcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flipcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/hovercommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/landcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/recordonusbcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/takeoffcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/zapcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/ardrone2.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/attitudecommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configidscommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/controlcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/emergencycommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flattrimcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flipcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/hovercommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/landcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/recordonusbcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/takeoffcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/zapcommand.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -772,16 +772,16 @@ CMakeFiles/drone.dir/src/drones/ardrone2/ardrone2.cpp.o
  /usr/local/include/opencv2/videoio/videoio_c.h
 CMakeFiles/drone.dir/src/drones/ardrone2/atcommands/atcommand.cpp.o
  ../include/drones/ardrone2/constants.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 CMakeFiles/drone.dir/src/drones/ardrone2/controllink.cpp.o
  ../include/drones/ardrone2/constants.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configcommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configidscommand.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/controllink.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/controllink.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configcommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configidscommand.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/controllink.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/controllink.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -978,21 +978,21 @@ CMakeFiles/drone.dir/src/drones/ardrone2/controllink.cpp.o
  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 CMakeFiles/drone.dir/src/drones/ardrone2/navdata/navdatamanager.cpp.o
  ../include/drones/ardrone2/constants.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatakeys.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatamanager.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatamanager.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatakeys.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatamanager.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatamanager.h
 CMakeFiles/drone.dir/src/drones/ardrone2/video/framereconstructor.cpp.o
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/pave.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/pave.h
 CMakeFiles/drone.dir/src/drones/ardrone2/video/videomanager.cpp.o
  ../include/drones/ardrone2/constants.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/codecconfig.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/pave.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videoframe.h
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videomanager.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videomanager.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/codecconfig.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/pave.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videoframe.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videomanager.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videomanager.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
@@ -1062,9 +1062,9 @@ CMakeFiles/drone.dir/src/drones/bebop/bebop.cpp.o
  ../src/drones/bebop/controllink.h
  ../src/drones/bebop/fullnavdata.h
  ../src/drones/bebop/videodecoder.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/bebop.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/bebop.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -1315,9 +1315,9 @@ CMakeFiles/drone.dir/src/drones/bebop/commandcomposer.cpp.o
  ../include/commands.h
  ../include/drones/bebop/commands.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -1517,10 +1517,10 @@ CMakeFiles/drone.dir/src/drones/bebop/controllink.cpp.o
  ../include/drones/bebop/constants.h
  ../include/drones/bebop/types.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/controllink.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/controllink.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/controllink.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/controllink.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -1770,8 +1770,8 @@ CMakeFiles/drone.dir/src/drones/bebop/fullnavdata.cpp.o
  ../include/drones/bebop/constants.h
  ../include/drones/bebop/types.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/fullnavdata.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/fullnavdata.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/fullnavdata.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/fullnavdata.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -1969,8 +1969,8 @@ CMakeFiles/drone.dir/src/drones/bebop/fullnavdata.cpp.o
 CMakeFiles/drone.dir/src/drones/bebop/videodecoder.cpp.o
  ../include/drones/bebop/types.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.cpp
- /home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.h
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -2227,7 +2227,7 @@ CMakeFiles/drone.dir/src/drones/fpvdrone.cpp.o
  ../include/interface/istatuslistener.h
  ../include/interface/ivideolistener.h
  ../include/types.h
- /home/clemens/Downloads/libdrone-master/src/drones/fpvdrone.cpp
+ /home/clemens/TMSWhatever/DroneCtrl/src/drones/fpvdrone.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
