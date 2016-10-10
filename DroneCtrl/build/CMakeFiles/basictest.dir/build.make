@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/clemens/Downloads/libdrone-master
+CMAKE_SOURCE_DIR = /home/clemens/TMSWhatever/DroneCtrl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/clemens/Downloads/libdrone-master/build
+CMAKE_BINARY_DIR = /home/clemens/TMSWhatever/DroneCtrl/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/basictest.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/basictest.dir/flags.make
 
 CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o: CMakeFiles/basictest.dir/flags.make
 CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o: ../examples/basic/basictest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clemens/Downloads/libdrone-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o -c /home/clemens/Downloads/libdrone-master/examples/basic/basictest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o -c /home/clemens/TMSWhatever/DroneCtrl/examples/basic/basictest.cpp
 
 CMakeFiles/basictest.dir/examples/basic/basictest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basictest.dir/examples/basic/basictest.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clemens/Downloads/libdrone-master/examples/basic/basictest.cpp > CMakeFiles/basictest.dir/examples/basic/basictest.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clemens/TMSWhatever/DroneCtrl/examples/basic/basictest.cpp > CMakeFiles/basictest.dir/examples/basic/basictest.cpp.i
 
 CMakeFiles/basictest.dir/examples/basic/basictest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basictest.dir/examples/basic/basictest.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clemens/Downloads/libdrone-master/examples/basic/basictest.cpp -o CMakeFiles/basictest.dir/examples/basic/basictest.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clemens/TMSWhatever/DroneCtrl/examples/basic/basictest.cpp -o CMakeFiles/basictest.dir/examples/basic/basictest.cpp.s
 
 CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.o: CMakeFiles/basictest.dir/flags.make
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.o: ../examples/basic/joystick.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clemens/Downloads/libdrone-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/basictest.dir/examples/basic/joystick.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basictest.dir/examples/basic/joystick.cc.o -c /home/clemens/Downloads/libdrone-master/examples/basic/joystick.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/basictest.dir/examples/basic/joystick.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basictest.dir/examples/basic/joystick.cc.o -c /home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.cc
 
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basictest.dir/examples/basic/joystick.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clemens/Downloads/libdrone-master/examples/basic/joystick.cc > CMakeFiles/basictest.dir/examples/basic/joystick.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.cc > CMakeFiles/basictest.dir/examples/basic/joystick.cc.i
 
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basictest.dir/examples/basic/joystick.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clemens/Downloads/libdrone-master/examples/basic/joystick.cc -o CMakeFiles/basictest.dir/examples/basic/joystick.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.cc -o CMakeFiles/basictest.dir/examples/basic/joystick.cc.s
 
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.o.requires:
 
@@ -105,16 +105,42 @@ CMakeFiles/basictest.dir/examples/basic/joystick.cc.o.provides: CMakeFiles/basic
 CMakeFiles/basictest.dir/examples/basic/joystick.cc.o.provides.build: CMakeFiles/basictest.dir/examples/basic/joystick.cc.o
 
 
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o: CMakeFiles/basictest.dir/flags.make
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o: ../examples/basic/DroneController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o -c /home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.cpp
+
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.cpp > CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.i
+
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.cpp -o CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.s
+
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.requires:
+
+.PHONY : CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.requires
+
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.provides: CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.requires
+	$(MAKE) -f CMakeFiles/basictest.dir/build.make CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.provides.build
+.PHONY : CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.provides
+
+CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.provides.build: CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o
+
+
 # Object files for target basictest
 basictest_OBJECTS = \
 "CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o" \
-"CMakeFiles/basictest.dir/examples/basic/joystick.cc.o"
+"CMakeFiles/basictest.dir/examples/basic/joystick.cc.o" \
+"CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o"
 
 # External object files for target basictest
 basictest_EXTERNAL_OBJECTS =
 
 basictest: CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o
 basictest: CMakeFiles/basictest.dir/examples/basic/joystick.cc.o
+basictest: CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o
 basictest: CMakeFiles/basictest.dir/build.make
 basictest: /usr/lib/x86_64-linux-gnu/libboost_system.so
 basictest: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -132,6 +158,12 @@ basictest: /usr/lib/x86_64-linux-gnu/libavcodec.so
 basictest: /usr/lib/x86_64-linux-gnu/libavutil.so
 basictest: /usr/lib/x86_64-linux-gnu/libswscale.so
 basictest: /usr/lib/x86_64-linux-gnu/libz.so
+basictest: /usr/lib/x86_64-linux-gnu/libGLU.so
+basictest: /usr/lib/x86_64-linux-gnu/libGL.so
+basictest: /usr/lib/x86_64-linux-gnu/libglut.so
+basictest: /usr/lib/x86_64-linux-gnu/libXmu.so
+basictest: /usr/lib/x86_64-linux-gnu/libXi.so
+basictest: /usr/lib/x86_64-linux-gnu/libGLEW.so
 basictest: libdrone.so
 basictest: /usr/lib/x86_64-linux-gnu/libboost_system.so
 basictest: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -167,7 +199,7 @@ basictest: /usr/local/lib/libopencv_imgproc.so.3.1.0
 basictest: /usr/local/lib/libopencv_flann.so.3.1.0
 basictest: /usr/local/lib/libopencv_core.so.3.1.0
 basictest: CMakeFiles/basictest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clemens/Downloads/libdrone-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable basictest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable basictest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/basictest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -177,6 +209,7 @@ CMakeFiles/basictest.dir/build: basictest
 
 CMakeFiles/basictest.dir/requires: CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o.requires
 CMakeFiles/basictest.dir/requires: CMakeFiles/basictest.dir/examples/basic/joystick.cc.o.requires
+CMakeFiles/basictest.dir/requires: CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o.requires
 
 .PHONY : CMakeFiles/basictest.dir/requires
 
@@ -185,6 +218,6 @@ CMakeFiles/basictest.dir/clean:
 .PHONY : CMakeFiles/basictest.dir/clean
 
 CMakeFiles/basictest.dir/depend:
-	cd /home/clemens/Downloads/libdrone-master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/clemens/Downloads/libdrone-master /home/clemens/Downloads/libdrone-master /home/clemens/Downloads/libdrone-master/build /home/clemens/Downloads/libdrone-master/build /home/clemens/Downloads/libdrone-master/build/CMakeFiles/basictest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/clemens/TMSWhatever/DroneCtrl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/clemens/TMSWhatever/DroneCtrl /home/clemens/TMSWhatever/DroneCtrl /home/clemens/TMSWhatever/DroneCtrl/build /home/clemens/TMSWhatever/DroneCtrl/build /home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/basictest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/basictest.dir/depend
 

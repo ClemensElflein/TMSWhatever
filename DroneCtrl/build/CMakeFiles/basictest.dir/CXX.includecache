@@ -310,7 +310,11 @@ libavformat/avformat.h
 libswscale/swscale.h
 -
 
-/home/clemens/Downloads/libdrone-master/examples/basic/basictest.cpp
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.cpp
+DroneController.h
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.h
+
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.h
 drones/ardrone2/ardrone2.h
 -
 drones/bebop/bebop.h
@@ -326,11 +330,37 @@ chrono
 thread
 -
 joystick.hh
-/home/clemens/Downloads/libdrone-master/examples/basic/joystick.hh
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.hh
 
-/home/clemens/Downloads/libdrone-master/examples/basic/joystick.cc
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/basictest.cpp
+drones/ardrone2/ardrone2.h
+-
+drones/bebop/bebop.h
+-
+commands.h
+-
+iostream
+-
+memory
+-
+chrono
+-
+thread
+-
 joystick.hh
-/home/clemens/Downloads/libdrone-master/examples/basic/joystick.hh
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.hh
+DroneController.h
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.h
+GL/glew.h
+-
+GL/freeglut.h
+-
+pthread.h
+-
+
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.cc
+joystick.hh
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.hh
 sys/types.h
 -
 sys/stat.h
@@ -344,9 +374,9 @@ string
 sstream
 -
 unistd.h
-/home/clemens/Downloads/libdrone-master/examples/basic/unistd.h
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/unistd.h
 
-/home/clemens/Downloads/libdrone-master/examples/basic/joystick.hh
+/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.hh
 string
 -
 

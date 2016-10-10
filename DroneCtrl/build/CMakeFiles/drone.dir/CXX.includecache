@@ -326,7 +326,7 @@ libavformat/avformat.h
 libswscale/swscale.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drone.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drone.cpp
 drone.h
 -
 algorithm
@@ -338,7 +338,7 @@ chrono
 iostream
 -
 
-/home/clemens/Downloads/libdrone-master/src/dronehelper.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/dronehelper.cpp
 dronehelper.h
 -
 drones/ardrone2/commands.h
@@ -348,37 +348,37 @@ drones/bebop/commands.h
 Eigen/Dense
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/ardrone2.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/ardrone2.cpp
 drones/ardrone2/ardrone2.h
 -
 atcommands/configcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configcommand.h
 atcommands/configidscommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configidscommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configidscommand.h
 atcommands/controlcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/controlcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/controlcommand.h
 atcommands/attitudecommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/attitudecommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/attitudecommand.h
 atcommands/emergencycommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/emergencycommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/emergencycommand.h
 atcommands/flattrimcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flattrimcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flattrimcommand.h
 atcommands/flipcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flipcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flipcommand.h
 atcommands/hovercommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/hovercommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/hovercommand.h
 atcommands/landcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/landcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/landcommand.h
 atcommands/magnetometercalibrationcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
 atcommands/recordonusbcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/recordonusbcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/recordonusbcommand.h
 atcommands/resetwatchdogcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
 atcommands/takeoffcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/takeoffcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/takeoffcommand.h
 atcommands/zapcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/zapcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/zapcommand.h
 iostream
 -
 limits
@@ -388,9 +388,9 @@ cmath
 boost/filesystem.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.cpp
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 string
 -
 algorithm
@@ -398,7 +398,7 @@ algorithm
 cstring
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 string
 -
 vector
@@ -406,77 +406,77 @@ vector
 drones/ardrone2/constants.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/attitudecommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/attitudecommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 string
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configidscommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configidscommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 types.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/controlcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/controlcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/emergencycommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/emergencycommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flattrimcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flattrimcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/flipcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/flipcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/hovercommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/hovercommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/landcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/landcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/magnetometercalibrationcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/recordonusbcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/recordonusbcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/resetwatchdogcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/takeoffcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/takeoffcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/zapcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/zapcommand.h
 atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/controllink.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/controllink.cpp
 controllink.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/controllink.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/controllink.h
 atcommands/atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 atcommands/configcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configcommand.h
 atcommands/configidscommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/configidscommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/configidscommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/controllink.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/controllink.h
 string
 -
 vector
@@ -486,15 +486,15 @@ boost/asio.hpp
 stdexcept
 -
 atcommands/atcommand.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/atcommands/atcommand.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/atcommands/atcommand.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatakeys.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatakeys.h
 cstdint
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatamanager.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatamanager.cpp
 navdatamanager.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatamanager.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatamanager.h
 drones/ardrone2/constants.h
 -
 boost/bind.hpp
@@ -504,43 +504,43 @@ iostream
 string
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatamanager.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatamanager.h
 boost/asio.hpp
 -
 navdatakeys.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/navdata/navdatakeys.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/navdata/navdatakeys.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/codecconfig.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/codecconfig.h
 libavcodec/avcodec.h
 -
 libswscale/swscale.h
 -
 videoframe.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videoframe.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videoframe.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.cpp
 framereconstructor.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.h
 algorithm
 -
 iostream
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.h
 pave.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/pave.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/pave.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/pave.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/pave.h
 cstdint
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videoframe.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videoframe.h
 libavcodec/avcodec.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videomanager.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videomanager.cpp
 videomanager.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videomanager.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videomanager.h
 iomanip
 -
 boost/bind.hpp
@@ -552,13 +552,13 @@ chrono
 libswscale/swscale.h
 -
 videoframe.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videoframe.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videoframe.h
 framereconstructor.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/framereconstructor.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/framereconstructor.h
 drones/ardrone2/constants.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/videomanager.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/videomanager.h
 boost/asio.hpp
 -
 opencv2/opencv.hpp
@@ -568,11 +568,11 @@ libavcodec/avcodec.h
 libavformat/avformat.h
 -
 codecconfig.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/codecconfig.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/codecconfig.h
 pave.h
-/home/clemens/Downloads/libdrone-master/src/drones/ardrone2/video/pave.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/ardrone2/video/pave.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/bebop.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/bebop.cpp
 drones/bebop/bebop.h
 -
 drones/bebop/commands.h
@@ -582,21 +582,21 @@ limits
 boost/log/trivial.hpp
 -
 protocol.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
 commandcomposer.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.h
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.cpp
 commandcomposer.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.h
 boost/log/trivial.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/commandcomposer.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/commandcomposer.h
 types.h
 -
 protocol.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
 drones/bebop/commands.h
 -
 vector
@@ -604,9 +604,9 @@ vector
 boost/any.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/controllink.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/controllink.cpp
 controllink.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/controllink.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/controllink.h
 boost/log/trivial.hpp
 -
 string
@@ -626,7 +626,7 @@ chrono
 locale
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/controllink.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/controllink.h
 drones/bebop/constants.h
 -
 types.h
@@ -634,9 +634,9 @@ types.h
 commands.h
 -
 protocol.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
 videodecoder.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.h
 memory
 -
 array
@@ -660,9 +660,9 @@ boost/asio.hpp
 opencv2/opencv.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/fullnavdata.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/fullnavdata.cpp
 fullnavdata.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/fullnavdata.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/fullnavdata.h
 vector
 -
 utility
@@ -672,7 +672,7 @@ boost/log/trivial.hpp
 boost/bind.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/fullnavdata.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/fullnavdata.h
 types.h
 -
 drones/bebop/types.h
@@ -686,15 +686,15 @@ memory
 boost/asio.hpp
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/protocol.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/protocol.h
 string
 -
 vector
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.cpp
 videodecoder.h
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.h
 boost/log/trivial.hpp
 -
 memory
@@ -702,7 +702,7 @@ memory
 chrono
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/bebop/videodecoder.h
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/bebop/videodecoder.h
 vector
 -
 drones/bebop/types.h
@@ -716,7 +716,7 @@ libavformat/avformat.h
 libswscale/swscale.h
 -
 
-/home/clemens/Downloads/libdrone-master/src/drones/fpvdrone.cpp
+/home/clemens/TMSWhatever/DroneCtrl/src/drones/fpvdrone.cpp
 drones/fpvdrone.h
 -
 

@@ -13,6 +13,7 @@ find_package(Eigen3 REQUIRED)
 find_package(OpenGL)
 find_package(GLEW)
 find_package(GLUT)
+find_package (Threads)
 
 include_directories(${EIGEN3_INCLUDE_DIR})
 
@@ -50,6 +51,7 @@ target_link_libraries(basictest ${OpenCV_LIBRARIES})
 target_link_libraries(basictest ${OPENGL_LIBRARIES}
         ${GLUT_LIBRARY} ${GLEW_LIBRARY})
 target_link_libraries(basictest drone)
+target_link_libraries (basictest ${CMAKE_THREAD_LIBS_INIT})
 
 # Install Library
 install(TARGETS drone LIBRARY DESTINATION lib)

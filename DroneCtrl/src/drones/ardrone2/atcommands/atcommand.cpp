@@ -46,7 +46,7 @@ string ATCommand::_string(string value)
 	return '"' + value + '"';
 }
 
-unsigned int ATCommand::floatToIntBits(float f)
+int ATCommand::floatToIntBits(float f)
 {
    static_assert(sizeof(float) == sizeof(unsigned int), "sizeof(float) must be equal to sizeof(unsigned int)!");
    unsigned int ret;

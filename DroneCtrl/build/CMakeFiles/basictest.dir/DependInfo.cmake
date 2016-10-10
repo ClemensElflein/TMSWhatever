@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/clemens/Downloads/libdrone-master/examples/basic/basictest.cpp" "/home/clemens/Downloads/libdrone-master/build/CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o"
-  "/home/clemens/Downloads/libdrone-master/examples/basic/joystick.cc" "/home/clemens/Downloads/libdrone-master/build/CMakeFiles/basictest.dir/examples/basic/joystick.cc.o"
+  "/home/clemens/TMSWhatever/DroneCtrl/examples/basic/DroneController.cpp" "/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/basictest.dir/examples/basic/DroneController.cpp.o"
+  "/home/clemens/TMSWhatever/DroneCtrl/examples/basic/basictest.cpp" "/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/basictest.dir/examples/basic/basictest.cpp.o"
+  "/home/clemens/TMSWhatever/DroneCtrl/examples/basic/joystick.cc" "/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/basictest.dir/examples/basic/joystick.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/clemens/Downloads/libdrone-master/build/CMakeFiles/drone.dir/DependInfo.cmake"
+  "/home/clemens/TMSWhatever/DroneCtrl/build/CMakeFiles/drone.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

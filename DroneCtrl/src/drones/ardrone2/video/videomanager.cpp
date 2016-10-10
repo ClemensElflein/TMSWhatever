@@ -58,6 +58,7 @@ void VideoManager::init(string ip, boost::asio::io_service &io_service)
 
 	startReceive();
 
+	/*
 	// For the record stream
 	tcp::resolver r_resolver(io_service);
 	tcp::resolver::query r_query(ip, to_string(ardrone2::VIDEO_RECORDING_PORT));
@@ -67,7 +68,8 @@ void VideoManager::init(string ip, boost::asio::io_service &io_service)
 	boost::asio::connect(*recordingSocket, r_endpoint_iterator);
 
 	recording_startReceive();
-}
+*/
+ }
 
 cv::Mat VideoManager::getVideoFrame()
 {
