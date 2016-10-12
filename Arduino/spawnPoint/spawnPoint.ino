@@ -1,4 +1,4 @@
-#include <Adafruit_NeoPixel.h>
+//#include <Adafruit_NeoPixel.h>
 
 /*
  * IRremote: IRsendDemo - demonstrates sending IR codes with IRsend
@@ -29,10 +29,10 @@ IRsend irsend;
 IRrecv irrecv(PIN_RECEIVE);
 decode_results results;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, PIN_PIXEL, NEO_GRB + NEO_KHZ800);
+//Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, PIN_PIXEL, NEO_GRB + NEO_KHZ800);
 
-bool alive;
-bool triggerDown;
+//bool alive;
+//bool triggerDown;
 
 
 void setup()
@@ -41,7 +41,7 @@ void setup()
   irrecv.enableIRIn();
 
 
-  strip.begin();
+//  strip.begin();
 
 #ifdef GUN
   pinMode(PIN_TRIGGER, INPUT);
@@ -52,30 +52,30 @@ void setup()
   triggerDown = !digitalRead(PIN_TRIGGER);
 #endif
 
-  setAlive(true);
+//  setAlive(true);
 }
 
 void loop() {
-#ifdef GUN
-  bool triggerDownNow = !digitalRead(PIN_TRIGGER);
-  delay(50);
-  triggerDownNow &= !digitalRead(PIN_TRIGGER);
-  
-  if(triggerDownNow && !triggerDown) {
+//#ifdef GUN
+//  bool triggerDownNow = !digitalRead(PIN_TRIGGER);
+//  delay(50);
+//  triggerDownNow &= !digitalRead(PIN_TRIGGER);
+//  
+//  if(triggerDownNow && !triggerDown) {
     shoot();
-  }
-  triggerDown = triggerDownNow;
-#endif
+//  }
+//  triggerDown = triggerDownNow;
+//#endif
   
-	if (irrecv.decode(&results)) {
-    irrecv.resume();
-    if(results.decode_type == SONY) {
-      setAlive(false);
-      delay(1000);
-      setAlive(true);
-      
-    }
-  }
+//	if (irrecv.decode(&results)) {
+//    irrecv.resume();
+//    if(results.decode_type == SONY) {
+//      setAlive(false);
+//      delay(1000);
+//      setAlive(true);
+//      
+//    }
+//  }
 }
 
 void shoot() {
@@ -83,7 +83,7 @@ void shoot() {
   digitalWrite(PIN_STATUS, HIGH);
 #endif
   for (int i = 0; i < SHOOT_COUNT; i++) {
-    irsend.sendSony(0xa01, 12);
+    irsend.sendSony(0x123, 12);
     delay(40);
   }
 #ifdef GUN
@@ -93,16 +93,16 @@ void shoot() {
   irrecv.enableIRIn();
 }
 
-void setAlive(bool a) {
-#ifdef GUN
-  Serial.println(a ? "alive" : "dead");    
-#endif
-  alive = a;
-  if(a) {
-    strip.setPixelColor(0, 0, 255, 0);
-  } else {
-    strip.setPixelColor(0, 255, 0, 0);
-  }
-  strip.show();
-}
+//void setAlive(bool a) {
+//#ifdef GUN
+//  Serial.println(a ? "alive" : "dead");    
+//#endif
+//  alive = a;
+//  if(a) {
+//    strip.setPixelColor(0, 0, 255, 0);
+//  } else {
+//    strip.setPixelColor(0, 255, 0, 0);
+//  }
+//  strip.show();
+//}
 
