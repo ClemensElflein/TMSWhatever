@@ -85,6 +85,7 @@ static bool posSetMode = false;
 static RPYType stabilizationModeRoll  = ANGLE; // Current stabilization type of roll (rate or angle)
 static RPYType stabilizationModePitch = ANGLE; // Current stabilization type of pitch (rate or angle)
 static RPYType stabilizationModeYaw   = RATE;  // Current stabilization type of yaw (rate or angle)
+static uint8_t shootState = 0;
 
 static YawModeType yawMode = DEFAULT_YAW_MODE; // Yaw mode configuration
 static bool carefreeResetFront;             // Reset what is front in carefree mode
@@ -186,6 +187,7 @@ static void shootCrtpCB(CRTPPacket* pk)
 {
   // We don't care about the data. Write something to the console
   consolePuts("Shoot");
+  shootState++;
 }
 
 
@@ -396,4 +398,5 @@ PARAM_ADD(PARAM_UINT8, yawRst, &carefreeResetFront)
 PARAM_ADD(PARAM_UINT8, stabModeRoll, &stabilizationModeRoll)
 PARAM_ADD(PARAM_UINT8, stabModePitch, &stabilizationModePitch)
 PARAM_ADD(PARAM_UINT8, stabModeYaw, &stabilizationModeYaw)
+PARAM_ADD(PARAM_UINT8, shootState, &shootState)
 PARAM_GROUP_STOP(flightmode)
