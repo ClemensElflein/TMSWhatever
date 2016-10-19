@@ -1,5 +1,4 @@
-#include <WS2811.h>
-
+#include <Adafruit_NeoPixel.h>
 
 /*
    IRremote: IRsendDemo - demonstrates sending IR codes with IRsend
@@ -11,34 +10,30 @@
 
 #include <IRremote.h>
 
-#include <SoftSerial.h>
-
 
 // Cannot change this, only reminder
-#define SERIAL_TX 0
-#define PIN_TRANSMIT 1
-#define SERIAL_RX 2
-#define PIN_RECEIVE 3
+#define PIN_TRANSMIT 13
+#define PIN_RECEIVE 1
 #define PIN_PIXEL 4
 
 #define PIXEL_COUNT 1
+#define PIN_LASER 20
 
 // Send SHOOT_COUNT often if we want to shoot
-#define SHOOT_COUNT 4
+#define SHOOT_COUNT 2
 
 
 
-SoftSerial crazyflie(SERIAL_RX, SERIAL_TX); // RX, TX
 IRsend irsend;
 IRrecv irrecv(PIN_RECEIVE);
 decode_results results;
 
-DEFINE_WS2811_FN(WS2811RGB, PORTB, PIN_PIXEL)
-RGB_t rgb[1];
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIN_PIXEL, NEO_GRB + NEO_KHZ800);
 
 bool alive;
 bool triggerDown;
 int reviveCounter;
+unsigned long lastTimeShitReceived;
 
 struct __attribute__((packed)) crtpStuct {
   uint8_t start1;
@@ -65,61 +60,81 @@ void sendToCrazyflie(uint8_t c, uint8_t d1 = 0, uint8_t d2 = 0, uint8_t d3 = 0) 
 
   size_t s = sizeof(crtp);
   uint8_t* pt = (uint8_t*)&crtp;
-  for (int i = 0; i < s; i++)
-    crazyflie.write(*(pt + i));
-crazyflie.flush();
+  Serial.write(pt, s);
+  Serial.flush();
 }
 
 void setup()
 {
+  lastTimeShitReceived = millis();
+  Serial.begin(9600);
   reviveCounter = 0;
-  pinMode(PIN_RECEIVE, INPUT);
+  pinMode(PIN_RECEIVE, INPUT_PULLUP);
   irrecv.enableIRIn();
   pinMode(PIN_PIXEL, OUTPUT);
   pinMode(PIN_TRANSMIT, OUTPUT);
+  pinMode(PIN_LASER, OUTPUT);
 
-  pinMode(SERIAL_RX, INPUT);
-  pinMode(SERIAL_TX, OUTPUT);
+  strip.begin();
 
-  crazyflie.begin(9600);
-
-  digitalWrite(1, HIGH);
+  setColor(0,0,255);
+  
+  digitalWrite(PIN_TRANSMIT, HIGH);
+  digitalWrite(PIN_LASER, HIGH);
+  strip.show();
   delay(200);
-  digitalWrite(1, LOW);
-  delay(200);
+  digitalWrite(PIN_TRANSMIT, LOW);
+  digitalWrite(PIN_LASER, LOW);
   setAlive(true);
 }
 
 void loop() {
-
   if (irrecv.decode(&results)) {
     irrecv.resume();
     if (results.decode_type == SONY) {
       if ((results.value & 0xf00) == 0xa00) {
         reviveCounter ++;
-        if (reviveCounter >= 10) {
+        if (reviveCounter >= 5) {
+          if(!alive) {
+            sendToCrazyflie('r');
+          }
           setAlive(true);
-          sendToCrazyflie('r');
           reviveCounter = 0;
         }
       } else if ((results.value & 0xf00) == 0xb00) {
-        reviveCounter = 0;
+        if(alive) {
+          sendToCrazyflie('d', results.value & 0xFF);
+        }
         setAlive(false);
-        sendToCrazyflie('d', results.value & 0xFF);
+        reviveCounter = 0;
       }
     }
   }
 
+/*
+  unsigned long now = millis();
+  if(now - lastTimeShitReceived < 20) {
+    // Ignore
+    while(Serial.available())
+      Serial.read();
+  }
+
+  if(Serial.available()) {
+    shoot();
+    while(Serial.available())
+      Serial.read();
+    lastTimeShitReceived = millis();
+  }*/
+  
   // Read the buffer until \n is in front
-  while (crazyflie.available() >= 2 && crazyflie.peek() != '\n')
-    crazyflie.read();
-  if (crazyflie.available() >= 2) {
+  while (Serial.available() >= 2 && Serial.peek() != '\n')
+    Serial.read();
+  if (Serial.available() >= 2) {
     // We have a \n and a command, let's process
-    crazyflie.read();
-    char command = crazyflie.read();
+    Serial.read();
+    char command = Serial.read();
     if (command == 's') {
       shoot();
-      crazyflie.begin(9600);
     }
   }
 
@@ -129,17 +144,19 @@ void loop() {
 
 
 void shoot() {
-  digitalWrite(PIN_TRANSMIT, HIGH);
-  delay(100);
-  digitalWrite(PIN_TRANSMIT, LOW);
   if(!alive) {
     return;
   }
+  digitalWrite(PIN_LASER, HIGH);
   for (int i = 0; i < SHOOT_COUNT; i++) {
     irsend.sendSony(0xb01, 12);
-    delay(40);
+    delay(60);
   }
-  
+  digitalWrite(PIN_LASER, LOW);
+  for (int i = 0; i < SHOOT_COUNT; i++) {
+    irsend.sendSony(0xb01, 12);
+    delay(60);
+  }
   
   irrecv.enableIRIn();
 }
@@ -156,13 +173,11 @@ void updateColor() {
   } else {
     setColor(255, 0, 0);
   }
-  WS2811RGB(rgb, ARRAYLEN(rgb));
+  strip.show();
   delay(5);
 }
 
 void setColor(byte r, byte g, byte b) {
-  rgb[0].r = r;
-  rgb[0].g = g;
-  rgb[0].b = b;
+  strip.setPixelColor(0,r,g,b);
 }
 

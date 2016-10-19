@@ -1,14 +1,4 @@
-#include <ESP8266WiFi.h>
-#include <ESP8266mDNS.h>
-#include <WiFiUdp.h>
-#include <ArduinoOTA.h>
-
-const char* ssid = "#tms";
-const char* password = "ilovetms2016";
-
 #include <Adafruit_NeoPixel.h>
-
-#define OTA_EVERYTIME
 
 /*
  * IRremote: IRsendDemo - demonstrates sending IR codes with IRsend
@@ -20,29 +10,46 @@ const char* password = "ilovetms2016";
 
 #define GUN_RELOADABLE
 
-#include <IRremoteESP8266.h>
+#include <IRremote.h>
+
+// Team One
+//#define TEAM_COLOR 100,150,0,0
+#define TEAM_COLOR 0,100,150,0
+
 
 // Cannot change this, only reminder
-#define PIN_TRANSMIT D7
-#define PIN_PIXEL2 D8
-#define PIN_RECEIVE 1
+#define PIN_TRANSMIT 3
+#define PIN_PIXEL2 7
+#define PIN_RECEIVE 2
 //#define PIN_LED D2
-#define PIN_PIXEL D4
+#define PIN_PIXEL 4
+#define PIN_PLAY_SOUND_SHOOT 8
+#define PIN_PLAY_SOUND_RELOAD 9
+#define PIN_PLAY_SOUND_DEAD 10
+#define PIN_PLAY_SOUND_ALIVE 11
+#define PIN_PLAY_SOUND_SHOOT_NOAMMO 12
+#define PIN_LASER 13
+#define PIN_FLASHLIGHT A0
 
+#define SOUND_SHOOT 1
+#define SOUND_RELOAD 2
+#define SOUND_DEAD 3
+#define SOUND_ALIVE 4
+#define SOUND_SHOOT_NOAMMO 5
 
-#define PIN_TRIGGER D5
+#define PIN_TRIGGER 5
 //#define PIN_STATUS D2
 #define PIXEL_COUNT 4
 #define PIXEL_COUNT2 12
 
-#define PIN_RELOAD_TRIGGER D6
+#define PIN_RELOAD_TRIGGER 6
 
 
 // Send SHOOT_COUNT often if we want to shoot
 #define SHOOT_COUNT 2
 #define MAX_AMMO 4
 
-IRsend irsend(PIN_TRANSMIT);
+IRsend irsend;
 IRrecv irrecv(PIN_RECEIVE);
 decode_results results;
 
@@ -51,9 +58,8 @@ Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(PIXEL_COUNT2, PIN_PIXEL2, NEO_GRBW 
 
 bool alive;
 bool triggerDown;
-
-bool hasWifi;
-bool otaMode;
+bool reloadTriggerDown;
+bool flashlightState;
 
 #ifdef GUN_RELOADABLE
   int bullets;
@@ -63,27 +69,32 @@ bool otaMode;
 
 void setup()
 {
-  hasWifi = false;
-  otaMode = false;
+  flashlightState = false;
+  pinMode(PIN_PLAY_SOUND_DEAD, INPUT);
+  pinMode(PIN_PLAY_SOUND_SHOOT, INPUT);
+  pinMode(PIN_PLAY_SOUND_ALIVE, INPUT);
+  pinMode(PIN_PLAY_SOUND_RELOAD, INPUT);
+  pinMode(PIN_PLAY_SOUND_SHOOT_NOAMMO, INPUT);
+
+  pinMode(PIN_LASER, OUTPUT);
+  digitalWrite(PIN_LASER, LOW);
+
+  pinMode(PIN_FLASHLIGHT, INPUT_PULLUP);
+  
+  
   Serial.begin(115200);
   Serial.println("Booting");
   
+  pinMode(PIN_RECEIVE, INPUT);
+  digitalWrite(PIN_RECEIVE, HIGH);
+  irrecv.enableIRIn();
   
   strip.begin();
   strip2.begin();
   
   pinMode(PIN_TRIGGER, INPUT_PULLUP);
-#ifndef OTA_EVERYTIME
-    
-  if(!digitalRead(PIN_TRIGGER)) {
-    otaSetup();
-    return;
-  }
-  #else
-  otaSetup();
-  #endif
-  irrecv.enableIRIn();
 
+  
 #ifdef GUN_RELOADABLE
   bullets = MAX_AMMO;
   blinkCounter = 0;
@@ -94,79 +105,21 @@ void setup()
   triggerDown = !digitalRead(PIN_TRIGGER);
 
   setAlive(true);
+
+  setColorFront(0,0,0,0);
+  strip2.show();
   
   Serial.println("setup done");
 }
 
-void otaSetup() {
-  otaMode = true;
-  Serial.println("OTA Mode!");
-  setColor(0,0,255);
-  strip.show();
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    setColor(255,0,255);
-    strip.show();
-    delay(100);
-    setColor(0,0,255);
-    strip.show();
-    delay(100);
-    Serial.print(".");
-  }
-  
-  while (WiFi.waitForConnectResult() != WL_CONNECTED) {
-    Serial.println("Connection Failed! Rebooting...");
-    delay(5000);
-    ESP.restart();
-  }
-  Serial.println("Connected");
-    ArduinoOTA.onStart([]() {
-      Serial.println("Start");
-    });
-    ArduinoOTA.onEnd([]() {
-      Serial.println("\nEnd");
-    });
-    ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
-      Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
-    });
-    ArduinoOTA.onError([](ota_error_t error) {
-      Serial.printf("Error[%u]: ", error);
-      if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
-      else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
-      else if (error == OTA_CONNECT_ERROR) Serial.println("Connect Failed");
-      else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
-      else if (error == OTA_END_ERROR) Serial.println("End Failed");
-    });
-  
-  
-    ArduinoOTA.begin();
-    Serial.println("Ready");
-    Serial.print("IP address: ");
-    Serial.println(WiFi.localIP());
-}
-
-void otaLoop() {
-  ArduinoOTA.handle();  
-  #ifndef OTA_EVERYTIME
-    setColor(0,255,0);
-  strip.show();
-  delay(100);
-  ArduinoOTA.handle();  
-  setColor(0,0,0);
-  strip.show();
-  delay(100);
-  #endif
-}
-
 void loop() {
-  if(otaMode) {
-    otaLoop();
-    #ifndef OTA_EVERYTIME
-    return;
-    #endif
+  bool flashlightStateNow = !digitalRead(PIN_FLASHLIGHT);
+  if(flashlightStateNow != flashlightState) {
+    flashlightState = flashlightStateNow;
+    setColorFront(0,0,0,0);
+    strip2.show();
   }
+  
   bool triggerDownNow = !digitalRead(PIN_TRIGGER);
   if(triggerDownNow && !triggerDown) {
     delay(10);
@@ -179,15 +132,16 @@ void loop() {
     blinkState = !blinkState;
     blinkCounter = 0;
   }
-  bool reloadTriggerDown = !digitalRead(PIN_RELOAD_TRIGGER);
+  bool reloadTriggerDownNow = !digitalRead(PIN_RELOAD_TRIGGER);
   
-  if(reloadTriggerDown) {
+  if(reloadTriggerDownNow) {
     delay(10);
-    reloadTriggerDown &= !digitalRead(PIN_RELOAD_TRIGGER);
+    reloadTriggerDownNow &= !digitalRead(PIN_RELOAD_TRIGGER);
   }
-  if(reloadTriggerDown) {
+  if(reloadTriggerDownNow && !reloadTriggerDown) {
     reload();
   }
+  reloadTriggerDown = reloadTriggerDownNow;
 #endif
   
   if(triggerDownNow && !triggerDown) {
@@ -196,13 +150,18 @@ void loop() {
   triggerDown = triggerDownNow;
 
   if (irrecv.decode(&results)) {
-    shoot();
     irrecv.resume();
     if(results.decode_type == SONY) {
       if((results.value & 0xf00) == 0xa00) {
         // Spawn
+        if(!alive) {
+          playSound(SOUND_ALIVE);
+        }
         setAlive(true);
       } else {
+        if(alive) {
+          playSound(SOUND_DEAD);
+        }
         setAlive(false);
       }
     }
@@ -212,14 +171,39 @@ void loop() {
   updateColor();
 }
 
+void playSound(uint8_t id) {
+  int pin = 0;
+  switch(id) {
+    case SOUND_SHOOT:
+    pin = PIN_PLAY_SOUND_SHOOT;
+    break;
+    case SOUND_DEAD:
+    pin = PIN_PLAY_SOUND_DEAD;
+    break;
+    case SOUND_ALIVE:
+    pin = PIN_PLAY_SOUND_ALIVE;
+    break;
+    case SOUND_RELOAD:
+    pin = PIN_PLAY_SOUND_RELOAD;
+    break;
+    case SOUND_SHOOT_NOAMMO:
+    pin = PIN_PLAY_SOUND_SHOOT_NOAMMO;
+    break;
+    default:
+    return;
+  }
+
+  //Down the pin for some time and let it free again
+  pinMode(pin, OUTPUT);
+  delay(1);
+  digitalWrite(pin, LOW);
+  pinMode(pin, INPUT);
+}
 
 #ifdef GUN_RELOADABLE
 void reload() {
-  for (int i = 0; i < SHOOT_COUNT; i++) {
-    irsend.sendSony(0xa01, 12);
-    delay(10);
-  }
-  Serial.println("reload");
+  playSound(SOUND_RELOAD);
+  
   bullets = MAX_AMMO;
   updateColor();
 }
@@ -228,15 +212,22 @@ void reload() {
 
 void shoot() {  
 #ifdef GUN_RELOADABLE
-  if(bullets <= 0)
+  if(!alive) {
     return;
+  }
+  if(bullets <= 0) {
+    playSound(SOUND_SHOOT_NOAMMO);
+    return;
+  }
   bullets--;
   blinkState = 0;
   updateColor();
 #endif
+  playSound(1);
+
   setColorFront(0,0,0,255);
   strip2.show();
-  
+  digitalWrite(PIN_LASER, HIGH);
 
 
   for (int i = 0; i < SHOOT_COUNT; i++) {
@@ -246,6 +237,7 @@ void shoot() {
 
   setColorFront(0,0,0,0);
   strip2.show();
+  digitalWrite(PIN_LASER, LOW);
 
   for (int i = 0; i < SHOOT_COUNT; i++) {
     irsend.sendSony(0xb01, 12);
@@ -296,8 +288,30 @@ void setColor(byte r, byte g, byte b) {
 }
 
 void setColorFront(byte r, byte g, byte b, byte w) {
+  if(!flashlightState) {
+    if(r || b || g || w) {
      for(int i = 0; i < PIXEL_COUNT2; i++)
       strip2.setPixelColor(i, r,g,b,w); 
+    } else {
+     for(int i = 0; i < PIXEL_COUNT2; i++) {
+        strip2.setPixelColor(i, TEAM_COLOR);
+     }
+    }
+  } else {
+    if(r || b || g || w) {
+     for(int i = 0; i < PIXEL_COUNT2; i++) {
+      strip2.setPixelColor(i, r,g,b,i%2 == 0 ? w : 255);
+     }
+    } else {
+     for(int i = 0; i < PIXEL_COUNT2; i++) {
+      if(i%2 == 0) {
+        strip2.setPixelColor(i, 0,0,0,255);
+      } else {
+        strip2.setPixelColor(i, TEAM_COLOR);
+      }
+     }       
+    }
+  }
 }
 
 
