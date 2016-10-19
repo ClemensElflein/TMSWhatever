@@ -1,3 +1,0 @@
-[submodule "crazyflie-lib-python"]
-	path = crazyflie-lib-python
-	url = https://github.com/ClemensElflein/crazyflie-lib-python
