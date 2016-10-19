@@ -1,0 +1,9 @@
+[submodule "Crazyflie/crazyflie-firmware"]
+	path = Crazyflie/crazyflie-firmware
+	url = https://github.com/ClemensElflein/crazyflie-firmware
+[submodule "Crazyflie/crazyflie-lib-python"]
+	path = Crazyflie/crazyflie-lib-python
+	url = https://github.com/ClemensElflein/crazyflie-lib-python
+[submodule "Crazyflie/crazyflie-clients-python"]
+	path = Crazyflie/crazyflie-clients-python
+	url = https://github.com/ClemensElflein/crazyflie-clients-python
